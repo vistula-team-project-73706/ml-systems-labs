@@ -1,0 +1,28 @@
+2026-10-27 15:55:13,695 INFO lab04: === 1. Ingestion ===
+2026-10-27 15:55:19,718 INFO ingest: Downloaded raw data from OpenML to data/raw/adult_raw.csv
+2026-10-27 15:55:19,770 INFO ingest: Ingested rows=48842 columns=15
+2026-10-27 15:55:19,773 INFO ingest: Raw file sha256=cb49122a4a65f3b2b8a3a86b9c81fe5e883dc439597201fab7ea6e474ce66d11
+2026-10-27 15:55:19,776 INFO lab04: === 2. Validation ===
+2026-10-27 15:55:20,044 INFO validate: Validation: 42 checks, 4 failed, 3 informational
+2026-10-27 15:55:20,044 INFO validate:   FAIL duplicates_exact             *                            52 rows
+2026-10-27 15:55:20,044 INFO validate:   FAIL duplicates_conflicting_label *                            10 rows
+2026-10-27 15:55:20,044 INFO validate:   FAIL cross_field                  relationship/sex             1 rows
+2026-10-27 15:55:20,044 INFO validate:   FAIL cross_field                  relationship/sex             3 rows
+2026-10-27 15:55:20,045 INFO validate: Rows after validation: 48842 (unchanged)
+2026-10-27 15:55:20,046 INFO lab04: === 3. Split and cleaning ===
+2026-10-27 15:55:20,141 INFO transform: Split: train=34189 test=14653 (positive rate train=0.2393 test=0.2393)
+2026-10-27 15:55:20,159 INFO transform: Dropping 24 exact duplicate rows from train only (test untouched)
+2026-10-27 15:55:20,163 INFO lab04: === 4. Derived features vs baseline ===
+2026-10-27 15:55:23,710 INFO lab04: baseline_features: test acc=0.8540 f1=0.6601 | train 5-fold CV f1=0.6552 +- 0.0118
+2026-10-27 15:55:27,438 INFO lab04: with_derived_features: test acc=0.8578 f1=0.6696 | train 5-fold CV f1=0.6627 +- 0.0132
+2026-10-27 15:55:27,440 INFO lab04: Saved fitted preprocessor to lab04/results/preprocessor.joblib
+2026-10-27 15:55:27,440 INFO lab04: === 5. Label-quality audit ===
+2026-10-27 15:55:27,475 INFO label_audit: Duplicate-conflict audit (14 features): {'duplicate_feature_rows': 111, 'conflicting_rows': 10, 'conflicting_groups': 5}
+2026-10-27 15:55:27,509 INFO label_audit: Duplicate-conflict audit (13 features, no fnlwgt): {'duplicate_feature_rows': 11174, 'conflicting_rows': 3873, 'conflicting_groups': 1029}
+2026-10-27 15:55:27,514 INFO label_audit: 50-row sample: 47 OK, 3 with notes
+2026-10-27 15:55:27,519 INFO lab04: === 6. Processed data hash and config ===
+2026-10-27 15:55:30,711 INFO lab04: Processed train sha256=253cc30268f71e65c87aa11abb131c2ce0bea34fca999719277f66f71782b862
+2026-10-27 15:55:30,711 INFO lab04: Processed test  sha256=ee20c623b9330724f50ec06c25618be45c1e249ea66752de6719428be3e803b7
+2026-10-27 15:55:30,711 INFO lab04: Processed combined sha256=374b540d99b4c968ee92179895f8260334799776c32b7ab13fef70efa9e1034e
+2026-10-27 15:55:30,712 INFO lab04: Wrote lab04/results/config.yaml
+2026-10-27 15:55:30,712 INFO lab04: Pipeline finished

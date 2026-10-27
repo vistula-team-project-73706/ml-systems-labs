@@ -1,0 +1,12 @@
+{
+  "all_14_features": {
+    "duplicate_feature_rows": 111,
+    "conflicting_rows": 10,
+    "conflicting_groups": 5
+  },
+  "13_features_without_fnlwgt": {
+    "duplicate_feature_rows": 11174,
+    "conflicting_rows": 3873,
+    "conflicting_groups": 1029
+  }
+}

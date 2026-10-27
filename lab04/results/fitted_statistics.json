@@ -1,0 +1,42 @@
+{
+  "numeric_median": {
+    "age": 37.0,
+    "fnlwgt": 178272.0,
+    "education-num": 10.0,
+    "capital-gain": 0.0,
+    "capital-loss": 0.0,
+    "hours-per-week": 40.0,
+    "capital_net": 0.0,
+    "hours_per_age": 2.0
+  },
+  "clip_low_p1": {
+    "age": 17.0,
+    "fnlwgt": 27035.2,
+    "education-num": 3.0,
+    "capital-gain": 0.0,
+    "capital-loss": 0.0,
+    "hours-per-week": 8.0,
+    "capital_net": -1980.0,
+    "hours_per_age": 0.20833333333333334
+  },
+  "clip_high_p99": {
+    "age": 74.0,
+    "fnlwgt": 509629.0,
+    "education-num": 16.0,
+    "capital-gain": 15024.0,
+    "capital-loss": 1980.0,
+    "hours-per-week": 80.0,
+    "capital_net": 15024.0,
+    "hours_per_age": 20.0
+  },
+  "categorical_mode": {
+    "workclass": "Private",
+    "education": "HS-grad",
+    "marital-status": "Married-civ-spouse",
+    "occupation": "Prof-specialty",
+    "relationship": "Husband",
+    "race": "White",
+    "sex": "Male",
+    "native-country": "United-States"
+  }
+}
