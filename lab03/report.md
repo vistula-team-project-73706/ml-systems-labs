@@ -87,6 +87,11 @@ are not the same size. This matters for the comparison: the CNN has
 The per-layer values for all layers are in
 `results/hand_flops_per_layer.csv`.
 
+My handwritten pen-and-paper calculations of the parameter counts and
+one-layer FLOPs are in `results/hand_calculations.jpg`.
+
+![Hand calculations](results/hand_calculations.jpg)
+
 ### Hand count vs thop
 
 - **MLP and CNN:** the hand count and thop agree exactly. thop counts
@@ -194,6 +199,7 @@ Run `lab01/src/print_versions.py` (output saved to
 - `results/model_costs.csv`
 - `results/flops_comparison.csv`
 - `results/hand_flops_per_layer.csv`
+- `results/hand_calculations.jpg`
 - `results/latency_results.csv`
 - `results/training_history.csv`
 - `results/torchinfo_summaries.txt`
