@@ -1,0 +1,4 @@
+model,batch1_median_ms,batch128_median_ms,batch128_per_image_ms,threads
+MLP,0.0324,0.1636,0.00128,8
+CNN,0.1282,8.1661,0.0638,8
+Attention,0.404,10.0314,0.07837,8

@@ -1,0 +1,4 @@
+model,parameters,hand_flops,thop_flops_2x_macs,batch1_median_ms,batch128_median_ms,test_accuracy
+MLP,235146,469504,469504,0.0324,0.1636,0.879
+CNN,20490,2063488,2063488,0.1282,8.1661,0.8954
+Attention,71818,2329856,101632,0.404,10.0314,0.8571

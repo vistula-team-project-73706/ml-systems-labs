@@ -1,0 +1,4 @@
+model,hand_flops,thop_macs,thop_flops_2x_macs,ratio_thop_over_hand
+MLP,469504,234752,469504,1.0
+CNN,2063488,1031744,2063488,1.0
+Attention,2329856,50816,101632,0.044

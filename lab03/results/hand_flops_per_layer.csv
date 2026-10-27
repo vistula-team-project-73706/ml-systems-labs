@@ -1,0 +1,17 @@
+model,layer,hand_flops
+MLP,fc1 784->256,401408
+MLP,fc2 256->128,65536
+MLP,fc3 128->10,2560
+CNN,conv1 3x3 1->16 @28x28,225792
+CNN,conv2 3x3 16->32 @14x14,1806336
+CNN,fc 1568->10,31360
+Attention,patch projection 49->64 x16,100352
+Attention,encoder layer 1,1114112
+Attention,encoder layer 2,1114112
+Attention,head 64->10,1280
+Attention (one encoder layer),qkv_projection,393216
+Attention (one encoder layer),attention_scores,32768
+Attention (one encoder layer),attention_x_values,32768
+Attention (one encoder layer),output_projection,131072
+Attention (one encoder layer),feed_forward,524288
+Attention (one encoder layer),total,1114112
