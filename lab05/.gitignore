@@ -1,0 +1,8 @@
+results/gradient_check_output.txt
+results/train_moons_output.txt
+results/framework_analysis_output.txt
+results/test_output.txt
+results/training_history.csv
+results/gradient_check.csv
+results/eager_vs_compiled_runs.csv
+results/noncontiguous_runs.csv

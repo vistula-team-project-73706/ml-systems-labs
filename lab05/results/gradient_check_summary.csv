@@ -1,0 +1,6 @@
+expression,points,max_abs_diff_engine_vs_torch,max_abs_diff_engine_vs_numeric,limit,passed
+spec,104,0.0,1.9132784245812218e-09,1e-06,True
+relu_both_branches,100,0.0,1.4952021842873364e-09,1e-06,True
+shared_nodes,100,2.842170943040401e-14,4.591200308823318e-09,1e-06,True
+division_and_negative_power,100,2.220446049250313e-16,4.2383874188089976e-10,1e-06,True
+sigmoid_and_log,100,4.440892098500626e-16,1.3509157681390604e-09,1e-06,True
