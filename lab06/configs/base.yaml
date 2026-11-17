@@ -1,0 +1,49 @@
+# Lab 06 base configuration. One file describes one training run.
+# Any value can be changed from the command line, e.g.
+#   python lab06/src/train.py --set train.epochs=10 optimizer.name=sgd
+
+experiment:
+  mlflow_experiment: lab06
+  run_name: baseline
+  seed: 42
+  device: cpu            # cpu or mps
+  torch_threads: null    # null = PyTorch default
+
+data:
+  dataset: fashion_mnist # fashion_mnist, or fake for quick tests
+  root: data
+  train_size: 55000
+  val_size: 5000
+  batch_size: 128
+  eval_batch_size: 512
+  num_workers: 0
+  max_train_samples: null  # null = full epoch, a number = quick shortened run
+
+model:
+  name: cnn              # the Lab 03 CNN, best accuracy in Lab 03
+
+optimizer:
+  name: adam             # adam or sgd
+  lr: 0.001
+  momentum: 0.9          # only used by sgd
+  weight_decay: 0.0
+
+scheduler:
+  name: none             # none, step, cosine or plateau
+  step_size: 5           # step
+  gamma: 0.1             # step
+  t_max: 10              # cosine, in epochs
+  plateau_factor: 0.5    # plateau
+  plateau_patience: 1    # plateau
+
+train:
+  epochs: 5
+  accumulation_steps: 1
+
+checkpoint:
+  dir: lab06/checkpoints
+  resume: null           # path to a checkpoint .pt file
+
+mlflow:
+  enabled: true
+  tracking_uri: lab06/mlruns
