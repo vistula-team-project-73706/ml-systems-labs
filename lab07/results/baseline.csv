@@ -1,0 +1,2 @@
+model,epochs,train_samples_seen,train_seconds,parameters,size_mb,test_accuracy,test_loss,macs,latency_ms_batch1,latency_ms_batch1_p90,throughput_samples_per_s_batch128
+baseline_teacher,10,550000,303.0095162499929,997434,3.992824,0.9202,0.24960974922180176,8355744,0.3618749906308949,0.3658750210888684,3793.243570417076
